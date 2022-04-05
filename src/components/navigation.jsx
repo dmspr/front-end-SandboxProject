@@ -18,7 +18,8 @@ export default function Navigation() {
                     <a href="/event">Buat Event</a>
                 </li>
             </ul>
-            <Button name={'Sign Up'} />
+            <a href="/login"><Button name={'Sign Up'} />
+            </a>
 
         </NavigationStyled>
     )
