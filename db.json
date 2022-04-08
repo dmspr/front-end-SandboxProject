@@ -1,0 +1,10 @@
+{
+  "users": [
+    {
+      "email": "test@gmail.com",
+      "password": "$2a$10$n9bUoczO/NHXUDOAm7VH8ea71q2ENlfEi1YEHwqcR8QkXho7ttVhy",
+      "name": "test@gmail.com",
+      "id": 1
+    }
+  ]
+}

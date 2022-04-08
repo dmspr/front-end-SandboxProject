@@ -1,9 +1,9 @@
 import React from 'react'
 import styled from 'styled-components'
 import logo from '../img/logo.svg'
-import FormLogin from '../pages/Auth/formLogin'
+import FormRegister from '../pages/Auth/formRegister'
 
-export default function LoginSidebar() {
+export default function RegisterSidebar() {
     return (
         <Container>
             <LogoWrapper>
@@ -12,12 +12,12 @@ export default function LoginSidebar() {
                     our <span>tickets</span>
                 </h2>
             </LogoWrapper>
-            <FormLogin />
-            {/* <Terms>
-                    by signing up, i agree to the Privacy Policy <br /> and Terms of Service
-                </Terms> */}
+            <FormRegister />
+            <Terms>
+                by signing up, i agree to the Privacy Policy <br /> and Terms of Service
+            </Terms>
             <h4>
-                dont have an account? <a href='/register' color='blue'>Sign Up</a>
+                have an account? <a href='/login' color='blue'>Sign in</a>
             </h4>
 
         </Container>
@@ -25,13 +25,13 @@ export default function LoginSidebar() {
     )
 }
 
-// const Terms = styled.p`
-//     padding: 0 1rem;
-//     text-align:center;
-//     font-size:10px;
-//     color:#808080;
-//     font-weight:300;
-// `
+const Terms = styled.p`
+    padding: 0 1rem;
+    text-align:center;
+    font-size:10px;
+    color:#808080;
+    font-weight:300;
+`
 
 const Container = styled.div`
     min-width:450px;

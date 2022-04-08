@@ -8,6 +8,7 @@ import {
   Outlet
 } from 'react-router-dom'
 import Login from './pages/login';
+import Register from './pages/register';
 
 
 
@@ -16,7 +17,6 @@ const RequiredAuth = () => {
   if (!isAuth) {
     return <Navigate to="/" />
   }
-
   //outlet is childer of private route
   return <Outlet />
 }
@@ -27,10 +27,11 @@ function App() {
       <Router>
         <Routes>
           <Route path='/' element={<Homepage />} />
-
+          <Route index path="/login" element={<Login />} />
+          <Route index path="/register" element={<Register />} />
 
           {/* <Route element={<RequiredAuth />}> */}
-          <Route index path="/login" element={<Login />} />
+          <Route index path="/dashboard" element="#" />
           {/* </Route> */}
         </Routes>
       </Router>
