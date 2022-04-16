@@ -1,0 +1,10 @@
+.container {
+    margin-left: 250px;
+    transition: margin-left .3s ease-in;
+    padding: 20px;
+    padding-left: 40px;
+}
+
+.container.inactive {
+    margin-left: 80px;
+}

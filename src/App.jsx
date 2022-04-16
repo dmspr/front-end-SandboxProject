@@ -9,6 +9,8 @@ import {
 } from 'react-router-dom'
 import Login from './pages/login';
 import Register from './pages/register';
+// import SidemenuPage from './components/Dashboard/sidemenuPage';
+import Dashboard from './pages/dashboard';
 
 
 
@@ -30,9 +32,9 @@ function App() {
           <Route index path="/login" element={<Login />} />
           <Route index path="/register" element={<Register />} />
 
-          {/* <Route element={<RequiredAuth />}> */}
-          <Route index path="/dashboard" element="#" />
-          {/* </Route> */}
+          <Route element={<RequiredAuth />}>
+            <Route index path="/dashboard" element={<Dashboard/>} />
+          </Route>
         </Routes>
       </Router>
 
