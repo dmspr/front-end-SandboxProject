@@ -4,6 +4,7 @@ import { BsArrowLeftSquareFill, BsArrowRightSquareFill } from 'react-icons/bs'
 import { BsCalendarEvent } from 'react-icons/bs'
 import profile from '../../img/profile.png'
 import "./style.css"
+// import { toast } from 'react-toastify'
 import axios from 'axios'
 
 export default function Sidemenu(props) {
@@ -23,6 +24,7 @@ export default function Sidemenu(props) {
     }, [])
 
     props.onCollapse(inactive)
+    console.log(data)
 
     return (
         <div className={`side-menu ${inactive ? 'inactive' : ""}`}>
@@ -40,7 +42,7 @@ export default function Sidemenu(props) {
                 <ul>
                     <li>
                         <a className='menu-item' href='/dashboard'>
-                            <div className="menu-icon">
+                            <div className="menu-icon" style={{borderBottom:'solid 1px'}}>
                                 <BsCalendarEvent />
                             </div>
                             <span>Event Saya</span></a>

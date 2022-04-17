@@ -1,12 +1,13 @@
 import React from "react";
 import styled from 'styled-components'
 import Profile from "./profile";
-import { Spinner } from 'reactstrap'
+
 
 
 export default function Kontendashboard() {
     return (
-        <><div>
+        <>
+        <div>
             <Body>
                 <div className="left-menu">
                     <h1>Event Saya</h1>
@@ -19,9 +20,7 @@ export default function Kontendashboard() {
             </Body>
 
             <div>
-                <Spinner>
-                    Loading...
-                </Spinner>
+                
             </div>
         </div>
 
@@ -38,6 +37,7 @@ const Body = styled.div`
     display:flex;
     flex-direction:row;
     border-bottom:solid 1px black;
+    
     
     .left-menu{
         width:50%;
@@ -65,7 +65,7 @@ const Body = styled.div`
     
     button {
         margin-bottom: 15px;
-        width: 20%;
+        width: 100px;
         heigth: 5%;
         border:none;
         border-radius: 5px;

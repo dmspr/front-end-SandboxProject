@@ -7,5 +7,118 @@
       "id": 1
     }
   ],
-  "products": []
+  "products": [
+    {
+      "Sheila On 7 Konser": "",
+      "id": 1
+    },
+    {
+      "id": 2
+    },
+    {
+      "id": 3
+    },
+    {
+      "id": 4
+    },
+    {
+      "sheilaon7": "",
+      "id": 5
+    },
+    {
+      "id": 6
+    },
+    {
+      "mencoba yang terbaik": "",
+      "id": 7
+    },
+    {
+      "test123": "",
+      "id": 8
+    },
+    {
+      "nameEvent": "123",
+      "id": 9
+    },
+    {
+      "nameEvent": "123",
+      "date": "2022-03-31",
+      "katagori": "Konser",
+      "location": "Jakarta",
+      "price": "20000",
+      "ticket": "2",
+      "description": "konser bro",
+      "id": 10
+    },
+    {
+      "nameEvent": "",
+      "date": "2022-04-17T18:31:58.443Z",
+      "katagori": "",
+      "location": "",
+      "price": 0,
+      "ticket": 0,
+      "description": "",
+      "id": 11
+    },
+    {
+      "nameEvent": "FourTwenty Festival",
+      "date": "2022-04-30",
+      "katagori": "Konser",
+      "location": "Yogyakarta",
+      "price": "100000",
+      "ticket": "5",
+      "description": "Konser 4-20",
+      "id": 12
+    },
+    {
+      "nameEvent": "",
+      "date": "2022-04-17T18:54:42.127Z",
+      "katagori": "",
+      "location": "",
+      "price": 0,
+      "ticket": 0,
+      "description": "",
+      "id": 13
+    },
+    {
+      "nameEvent": "",
+      "date": "2022-04-17T18:55:09.612Z",
+      "katagori": "",
+      "location": "",
+      "price": 0,
+      "ticket": 0,
+      "description": "",
+      "id": 14
+    },
+    {
+      "nameEvent": "",
+      "date": "2022-04-17T18:55:16.975Z",
+      "katagori": "",
+      "location": "",
+      "price": 0,
+      "ticket": 0,
+      "description": "",
+      "id": 15
+    },
+    {
+      "nameEvent": "",
+      "date": "2022-04-17T18:55:53.429Z",
+      "katagori": "",
+      "location": "",
+      "price": 0,
+      "ticket": 0,
+      "description": "",
+      "id": 16
+    },
+    {
+      "nameEvent": "sheilaon7",
+      "date": "2022-04-27",
+      "katagori": "",
+      "location": "soloraya",
+      "price": "2",
+      "ticket": "2",
+      "description": "a",
+      "id": 17
+    }
+  ]
 }

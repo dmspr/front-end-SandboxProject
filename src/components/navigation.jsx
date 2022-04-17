@@ -15,7 +15,7 @@ export default function Navigation() {
                     <a href="/discover">Search</a>
                 </li>
                 <li>
-                    <a href="/event">Buat Event</a>
+                    <a href="/make-event">Buat Event</a>
                 </li>
             </ul>
             <a href="/login"><Button name={'Sign Up'} />

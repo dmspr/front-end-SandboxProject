@@ -11,13 +11,16 @@ import Login from './pages/login';
 import Register from './pages/register';
 // import SidemenuPage from './components/Dashboard/sidemenuPage';
 import Dashboard from './pages/dashboard';
+import { ToastContainer } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
+import Event from '../src/pages/event'
 
 
 
 const RequiredAuth = () => {
   let isAuth = localStorage.getItem('access_token');
   if (!isAuth) {
-    return <Navigate to="/" />
+    return <Navigate to="/login" />
   }
   //outlet is childer of private route
   return <Outlet />
@@ -33,9 +36,11 @@ function App() {
           <Route index path="/register" element={<Register />} />
 
           <Route element={<RequiredAuth />}>
-            <Route index path="/dashboard" element={<Dashboard/>} />
+            <Route index path="/dashboard" element={<Dashboard />} />
+            <Route index path="/make-event" element={<Event />} />
           </Route>
         </Routes>
+        <ToastContainer theme='colored' />
       </Router>
 
     </>

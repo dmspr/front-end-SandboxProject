@@ -8,3 +8,21 @@
 .container.inactive {
     margin-left: 80px;
 }
+
+@media only screen and (max-width: 960px) {
+    .side-menu{
+        display: none;
+        transition: width .7s ease-in-out;
+    }
+
+    .container {
+        padding-left: 0;
+        margin-left: 20px;
+        transition: margin-left .3s ease-out;
+    }
+
+    .container.inactive {
+        margin-left: 20px;
+    }
+    
+}
