@@ -4,6 +4,8 @@ import { useFormik } from 'formik'
 import axios from 'axios'
 import styled from 'styled-components'
 import { FormFeedback } from 'reactstrap'
+import { toast } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
 
 
 const validationSchema = yup.object().shape({
@@ -30,13 +32,18 @@ export default function FormRegister() {
 
     const handleRegister = async () => {
         const { name, email, password } = formik.values
-        await axios.post(`http://localhost:8080/register`, {
+        await axios.post(`http://localhost:4000/register`, {
             name,
             email,
             password
         })
             .then(() => {
-                window.location = "/login"
+                toast.success('Register Succesfully', {
+                    position: "top-center",
+                    autoClose: 1500,
+                })
+                setTimeout(function () { window.location = '/login' }, 1500)
+
             })
             .catch((err) => console.log(err))
     }

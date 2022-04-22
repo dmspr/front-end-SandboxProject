@@ -1,0 +1,194 @@
+.container-konten {
+    margin: 50px 200px;
+    border-radius: 10px;
+    border: solid 1px #ababab;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    .submit-button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 20px 20px;
+
+        .create-data-button {
+            width: 75%;
+            max-width: 50px;
+            min-width: 80px;
+            height: 50px;
+            width: 100px;
+            border: none;
+            margin: 1rem 0;
+            box-shadow: 0px 14px 9px -15px rgba(0, 0, 0, 0.25);
+            border-radius: 5px;
+            background-color: #13aa52;
+            color: #fff;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s ease-in;
+        }
+
+        .create-data-button:hover {
+            transform: translateY(-3px);
+        }
+    }
+
+    img {
+        height: 450px;
+        width: 100%;
+        border-radius: 10px;
+    }
+
+    h5 {
+        color: black;
+    }
+
+    .top-section {
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+
+        h2 {
+            color: black;
+            padding-bottom: 5px;
+        }
+
+        .namaevent {
+            margin-bottom: 20px;
+            font-family: inherit;
+            width: 100%;
+            border: 0;
+            border-bottom: 1px solid #ababab;
+            outline: 0;
+            font-size: 1.6rem;
+            color: black;
+            padding: 7px 0;
+            background: transparent;
+            font-weight: 800;
+            // &::placeholder {
+            //     // color: transparent;
+            // }
+
+            &:placeholder-shown ~ .form__label {
+                font-size: 1.3rem;
+                cursor: text;
+                top: 20px;
+            }
+        }
+    }
+
+    .mid-section {
+        padding: 0 20px;
+        display: flex;
+        flex-direction: row;
+        position: relative;
+
+        .left {
+            display: flex;
+            flex-direction: column;
+            width: 33%;
+            margin-right: 15px;
+            .organizedh5 {
+                margin-top: 20px;
+            }
+        }
+
+        .middle {
+            display: flex;
+            flex-direction: column;
+            width: 33%;
+            margin-right: 15px;
+            .date {
+                padding-bottom: 8px;
+            }
+
+            .dateh5 {
+                margin-top: 20px;
+            }
+        }
+
+        .right {
+            display: flex;
+            flex-direction: column;
+            width: 34%;
+
+            .ticketh5 {
+                margin-top: 20px;
+            }
+        }
+    }
+
+    .bottom {
+        margin-top: 20px;
+        padding: 0 20px;
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        position: relative;
+    }
+
+    input {
+        font-size: 18px;
+        padding: 10px 10px 10px 0px;
+        display: block;
+        width: 100%;
+        border: none;
+        border-bottom: 1px solid #757575;
+    }
+    input:focus {
+        outline: none;
+    }
+    .price {
+        padding: 10px 10px 10px 25px;
+    }
+
+    textarea {
+        font-size: 18px;
+        padding: 10px 10px 10px 0px;
+        display: block;
+        width: 100%;
+        height: 100px;
+        border: none;
+        border-bottom: 1px solid #757575;
+    }
+
+    textarea:focus {
+        outline: none;
+    }
+
+    select {
+        font-size: 18px;
+        padding: 10px 10px 8px 5px;
+        display: block;
+        width: 100%;
+        border: none;
+        border-bottom: 1px solid #757575;
+    }
+    input:focus {
+        outline: none;
+    }
+
+    .currency-wrap {
+        position: relative;
+    }
+    .currency-code {
+        position: absolute;
+        left: 0px;
+        top: 30px;
+        color: black;
+    }
+    // .price{
+    // // padding:10px 20px;
+    // // border:solid 1px #ccc;
+    // // border-radius:5px;
+    // }
+
+    @media (max-width: 1200px) {
+        Container {
+            margin: 50px 100px;
+        }
+    }
+}

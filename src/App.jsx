@@ -14,6 +14,7 @@ import Dashboard from './pages/dashboard';
 import { ToastContainer } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
 import Event from '../src/pages/event'
+import Discover from './pages/discover';
 
 
 
@@ -38,6 +39,7 @@ function App() {
           <Route element={<RequiredAuth />}>
             <Route index path="/dashboard" element={<Dashboard />} />
             <Route index path="/make-event" element={<Event />} />
+            <Route index path="/discover" element={<Discover />} />
           </Route>
         </Routes>
         <ToastContainer theme='colored' />

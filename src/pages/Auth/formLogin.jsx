@@ -25,9 +25,10 @@ export default function FormLogin() {
     const handleLogin = async () => {
         const data = formik.values
 
-        await axios.post('http://localhost:8080/login', data)
+        await axios.post('http://localhost:4000/login', data)
             .then(res => {
-                localStorage.setItem('access_token', res.data.accessToken)
+                localStorage.setItem('access_token', res.data.token)
+                console.log(res.data.token)
                 toast.success('Login Succesfully', {
                     position: "top-center",
                     autoClose: 1500,

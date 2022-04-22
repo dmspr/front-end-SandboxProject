@@ -1,5 +1,6 @@
 import React from "react";
 import styled from 'styled-components'
+import Catalog from "../catalog/catalog";
 import Profile from "./profile";
 
 
@@ -7,23 +8,20 @@ import Profile from "./profile";
 export default function Kontendashboard() {
     return (
         <>
-        <div>
-            <Body>
-                <div className="left-menu">
-                    <h1>Event Saya</h1>
-
-                </div>
-                <div className="right-menu">
-                    <button><a href="/make-event"><p>BUAT EVENT</p></a></button>
-                    <Profile />
-                </div>
-            </Body>
-
             <div>
-                
-            </div>
-        </div>
+                <Body>
+                    <div className="left-menu">
+                        <h1>Event Saya</h1>
 
+                    </div>
+                    <div className="right-menu">
+                        <button className="makeevent"><a href="/make-event"><p>BUAT EVENT</p></a></button>
+                        <Profile />
+                    </div>
+                </Body>
+
+            </div>
+            <Catalog />
         </>
     )
 
@@ -76,6 +74,9 @@ const Body = styled.div`
 
         &:active, &:focus {
             box-shadow: none;
+        }
+        &:hover{
+            transform:translateY(-3px)
         }
     }
 `

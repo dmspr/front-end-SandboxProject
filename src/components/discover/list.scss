@@ -1,0 +1,125 @@
+.blogItem-wrap {
+    width: 100%;
+    flex: 1;
+    padding-right: 18px;
+    h3 {
+        margin: 0.5rem 0 1rem 0;
+        flex: 1;
+    }
+
+    img {
+        border-radius: 10px;
+        width: 100%;
+    }
+
+    .katagori {
+        display: flex;
+        flex-direction: row;
+        font-size: 0.7rem;
+        background: linear-gradient(to right, #6190e8, #a7bfe8);
+        color: #fff;
+        padding: 0.3rem 0.5rem;
+        border-radius: 5px;
+        width: fit-content;
+        text-transform: capitalize;
+    }
+
+    .description {
+        position: relative;
+        min-height: 50px;
+        max-height: 50px;
+        overflow: hidden;
+        font-size: 0.8rem;
+        padding-right: 0.6rem;
+        color: #a9a9a9;
+    }
+
+    .description::before {
+        position: absolute;
+        content: "...";
+        bottom: 0;
+        right: 0;
+    }
+
+    footer {
+        display: flex;
+        align-items: center;
+        margin-top: 1rem;
+        justify-content: space-between;
+        
+        span{
+            
+        }
+    }
+    .location {
+        position: relative;
+        max-height: 50px;
+        overflow: hidden;
+        font-size: 0.9rem;
+        padding-left: 0.2rem;
+        color: black;
+        font-weight: bold;
+    }
+    .date {
+        position: relative;
+        max-height: 50px;
+        overflow: hidden;
+        font-size: 0.9rem;
+        padding-left: 0.2rem;
+        color: #696969;
+    }
+    .btn-delete {
+        width: 75%;
+        max-width: 50px;
+        min-width: 50px;
+        height: 25px;
+        border: none;
+        margin: 1rem 0;
+        box-shadow: 0px 14px 9px -15px rgba(0, 0, 0, 0.25);
+        border-radius: 5px;
+        background-color: #ff4742;
+        color: #fff;
+        font-weight: 500;
+        cursor: pointer;
+        transition: all 0.2s ease-in;
+        margin-right: 2px;
+    }
+
+    .btn-delete:hover {
+        transform: translateY(-3px);
+    }
+
+    .btn-edit {
+        width: 75%;
+        max-width: 50px;
+        min-width: 50px;
+        height: 25px;
+        border: none;
+        margin: 1rem 0;
+        box-shadow: 0px 14px 9px -15px rgba(0, 0, 0, 0.25);
+        border-radius: 5px;
+        background-color: #13aa52;
+        color: #fff;
+        font-weight: 500;
+        cursor: pointer;
+        transition: all 0.2s ease-in;
+        margin-right: 2px;
+    }
+
+    .btn-edit:hover {
+        transform: translateY(-3px);
+    }
+
+    
+}
+@media (max-width: 768px) {
+    .blogItem-wrap {
+        padding-right: 10px;
+    }
+}
+
+@media (max-width: 576px) {
+    .blogItem-wrap {
+        padding-right: 0;
+    }
+}

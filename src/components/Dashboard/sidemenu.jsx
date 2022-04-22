@@ -12,7 +12,7 @@ export default function Sidemenu(props) {
     const [data, setData] = useState([])
 
     const getData = async () => {
-        await axios.get('http://localhost:8080/users')
+        await axios.get('http://localhost:4000/dashboard')
             .then((res) => {
                 setData(res.data)
             })
