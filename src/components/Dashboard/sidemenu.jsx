@@ -6,15 +6,17 @@ import profile from '../../img/profile.png'
 import "./style.css"
 // import { toast } from 'react-toastify'
 import axios from 'axios'
+import { useParams } from 'react-router-dom'
 
 export default function Sidemenu(props) {
+    const params = useParams()
     const [inactive, setInactive] = useState(false)
     const [data, setData] = useState([])
 
     const getData = async () => {
-        await axios.get('http://localhost:4000/dashboard')
+        await axios.get(`http://localhost:4000/dashboard/${params.id}`)
             .then((res) => {
-                setData(res.data)
+                setData(res.data.data[0])
             })
             .catch((err) => console.log(err))
     }
@@ -42,7 +44,7 @@ export default function Sidemenu(props) {
                 <ul>
                     <li>
                         <a className='menu-item' href='/dashboard'>
-                            <div className="menu-icon" style={{borderBottom:'solid 1px'}}>
+                            <div className="menu-icon" style={{ borderBottom: 'solid 1px' }}>
                                 <BsCalendarEvent />
                             </div>
                             <span>Event Saya</span></a>
@@ -55,13 +57,13 @@ export default function Sidemenu(props) {
                     <img src={profile} alt="profile" />
                 </div>
 
-                {data.map((v) => (
-                    <div className="user-info">
-                        <h5>{v.name}</h5>
-                        <p>{v.email}</p>
+                
+                <div className="user-info">
+                    <h5>{data.name}</h5>
+                    <p>{data.email}</p>
 
-                    </div>
-                ))}
+                </div>
+    
             </div>
         </div>
     )

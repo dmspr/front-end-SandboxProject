@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from "react";
-import './catalog.scss'
+import './catalogDiscover.scss'
 import axios from "axios";
-import ListDiscover from "./list";
+import ListDiscover from "./listDiscover";
+
+
 
 export default function CatalogDiscover() {
 
@@ -18,8 +20,9 @@ export default function CatalogDiscover() {
 
         getData()
     }, [])
+
     return (
-        <div className="container-catalog">
+        <div className="container-catalogs">
             <div className="wrapper">
                 {data.map((list) => (<ListDiscover list={list} key={list.id} />))}
             </div >

@@ -1,18 +1,27 @@
-.blogItem-wrap {
+.blogItem-wraps {
     width: 100%;
+    height: 100%;
     flex: 1;
-    padding-right: 18px;
+    // border: solid 1px;
+    border-radius: 12px;
+    padding-right: 0;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
     h3 {
         margin: 0.5rem 0 1rem 0;
         flex: 1;
+        padding-left: 10px;
+        padding-right: 10px;
     }
 
     img {
         border-radius: 10px;
         width: 100%;
+        height: 50%;
     }
 
     .katagori {
+        margin-top: 5px;
+        margin-left: 10px;
         display: flex;
         flex-direction: row;
         font-size: 0.7rem;
@@ -41,15 +50,37 @@
         right: 0;
     }
 
-    footer {
+    .mid {
+        padding-left: 10px;
+        padding-right: 10px;
+        display: flex;
+        flex-direction: row;
+    }
+    .left {
+        width: 100%;
+    }
+
+    p {
+        font-size: 15px;
+        font-weight: bold;
+    }
+    .right {
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-end;
+    }
+
+    div span {
         display: flex;
         align-items: center;
-        margin-top: 1rem;
-        justify-content: space-between;
-        
-        span{
-            
-        }
+        justify-content: center;
+    }
+    div span h5 {
+        padding-left: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0;
     }
     .location {
         position: relative;
@@ -109,17 +140,20 @@
     .btn-edit:hover {
         transform: translateY(-3px);
     }
-
-    
 }
+
+.blogItem-wraps:hover {
+    transform: translateY(-3px);
+}
+
 @media (max-width: 768px) {
-    .blogItem-wrap {
+    .blogItem-wraps {
         padding-right: 10px;
     }
 }
 
 @media (max-width: 576px) {
-    .blogItem-wrap {
+    .blogItem-wraps {
         padding-right: 0;
     }
 }

@@ -28,12 +28,12 @@ export default function FormLogin() {
         await axios.post('http://localhost:4000/login', data)
             .then(res => {
                 localStorage.setItem('access_token', res.data.token)
-                console.log(res.data.token)
+                console.log(res.data)
                 toast.success('Login Succesfully', {
                     position: "top-center",
                     autoClose: 1500,
                 })
-                setTimeout(function () { window.location = '/dashboard' }, 1500)
+                setTimeout(function () { window.location = `/dashboard/${res.data.payload.id}` }, 1500)
             })
             .catch(err => {
                 if (err.response.status === 400)

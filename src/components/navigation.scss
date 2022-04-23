@@ -1,0 +1,21 @@
+.container-navigation {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    min-height: 10vh;
+    align-items: center;
+    border-bottom: solid 1px #ababab;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+    padding: 0 60px;
+    .logo {
+        padding-top: 10px;
+        width: 50%;
+        display: flex;
+        align-items: flex-start;
+        width: 33%;
+        img {
+            height: 4rem;
+            padding-bottom: 0.5rem;
+        }
+    }
+}

@@ -2,10 +2,9 @@ import React, { useState, useEffect } from "react";
 import styled from 'styled-components'
 import Button from "../button";
 import logo from "../../img/logo.svg"
-import KontenDiscover from "./kontenDiscover";
 import Profile from '../dashboardKonten/profile'
 
-export default function NavbarDiscover() {
+export default function NavbarDiscoverById() {
     const [loggedIn, setLoggedIn] = useState(true);
     const RequiredAuth = () => {
         let isAuth = localStorage.getItem('access_token')
@@ -37,7 +36,7 @@ export default function NavbarDiscover() {
                     </a>)}
                 </div>
             </NavigationStyled>
-            <KontenDiscover />
+    
         </>
     )
 }

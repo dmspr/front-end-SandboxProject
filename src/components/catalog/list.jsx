@@ -14,11 +14,13 @@ import { toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
 import { MdLocationPin } from "react-icons/md"
 import { MdDateRange } from 'react-icons/md'
-// import FormDashboard from './form'
+import { useParams } from 'react-router-dom'
+import FormDashboard from './form'
 
 export default function List({ list }) {
 
-    const [data, setData] = useState([])
+    const params = useParams()
+    const [data, setData] = useState([])    
     const [modalVisible, setModalVisible] = useState(false)
     const [updatedId, setUpdatedId] = useState(null)
     const [action, setAction] = useState(null)
@@ -33,7 +35,7 @@ export default function List({ list }) {
                     position: "top-center",
                     autoClose: 800,
                 })
-                setTimeout(function () { window.location = '/dashboard' }, 1000)
+                setTimeout(function () { window.location = `/dashboard/${params.id}` }, 1500)
 
             })
             .catch((err) => console.log(err))
@@ -51,29 +53,29 @@ export default function List({ list }) {
         return b[2] + ' ' + months[b[1] - 1] + ' ' + b[0];
     }
     return (
-            <div className='blogItem-wrap'>
-                <img src={Logo} alt='test' />
-                <p className="katagori">{list.katagori}</p>
-                <h3>{list.nameEvent}</h3>
-                <p className="description">{list.description}</p>
+        <div className='blogItem-wrap'>
+            <img src={Logo} alt='test' />
+            <p className="katagori">{list.katagori}</p>
+            <h3>{list.nameEvent}</h3>
+            <p className="description">{list.description}</p>
 
-                <footer>
-                    <div>
-                        <div style={{ display: 'flex' }}>
-                            <MdLocationPin />
-                            <p className="location">{list.location}</p>
-                        </div>
-                        <div style={{ display: 'flex' }}>
-                            <MdDateRange />
-                            <p className="date">{formatDate(`${list.date}`)}</p>
-                        </div>
+            <footer>
+                <div>
+                    <div style={{ display: 'flex' }}>
+                        <MdLocationPin />
+                        <p className="location">{list.location}</p>
                     </div>
-                    <div>
-                        <Button className='btn-delete' color='danger' onClick={() => handleDelete(list.id)}> Delete</Button>
-                        <Button className='btn-edit' color='success' onClick={() => handleEdit(list.id)}> Edit</Button>
+                    <div style={{ display: 'flex' }}>
+                        <MdDateRange />
+                        <p className="date">{formatDate(`${list.date}`)}</p>
                     </div>
-                </footer>
-                {/* <Modal isOpen={modalVisible} toggle={() => setModalVisible(!modalVisible)}>
+                </div>
+                <div>
+                    <Button className='btn-delete' color='danger' onClick={() => handleDelete(list.id)}> Delete</Button>
+                    <Button className='btn-edit' color='success' onClick={() => handleEdit(list.id)}> Edit</Button>
+                </div>
+            </footer>
+            <Modal isOpen={modalVisible} toggle={() => setModalVisible(!modalVisible)}>
                     <ModalHeader>{`Form ${action} Data`}</ModalHeader>
                     <ModalBody>
                         <FormDashboard
@@ -84,7 +86,7 @@ export default function List({ list }) {
                             updatedId={updatedId}
                         />
                     </ModalBody>
-                </Modal> */}
-            </div>
+                </Modal>
+        </div>
     )
 }

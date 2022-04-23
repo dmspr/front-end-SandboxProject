@@ -8,8 +8,6 @@ export default function Homepage() {
         <>
             <div className='App'>
                 <Header />
-                <OuterLayout>
-                </OuterLayout>
             </div>
         </>
     );

@@ -30,13 +30,9 @@ export const NavigationStyled = styled.nav`
     justify-content: space-between;
     min-height:10vh;
     align-items: center;
-
     ul{
         display:flex;
         justify-content: space-between;
         width:20%;
     }
-
-
-
 `

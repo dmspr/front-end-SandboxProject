@@ -1,15 +1,18 @@
 import React, { useEffect, useState } from "react";
 import { FormGroup, Label, Input, Button } from "reactstrap";
 import axios from 'axios'
+import { useParams } from "react-router-dom";
 
 export default function FormDashboard({
     actionForm,
     data,
     updatedId,
     setModalVisible }) {
+    const params = useParams()
 
     const initialFormValue = {
         NameEvent: "",
+        organized: "",
         katagori: "",
         location: "",
         price: 0,
@@ -18,32 +21,22 @@ export default function FormDashboard({
     }
 
     const [form, setForm] = useState(initialFormValue);
+    const createData = async () => {
+        await axios.post('http://localhost:4000/make-event', form)
+            .then(() => {
+                data.push(form)
+            })
+            .catch((err) => console.log(err))
+        setModalVisible(false)
+    }
     const updateData = async () => {
-        await axios.put(`http://localhost:8080/products/${updatedId}`, form)
+        await axios.put(`http://localhost:4000/update_event/${params.id}`, form)
             .then(() => {
                 const updatedDataIndex = data.findIndex((p) => p.id === updatedId)
                 data[updatedDataIndex] = form;
             })
             .catch((err) => console.log(err))
         setModalVisible(false)
-
-        const createData = async () => {
-            await axios.post('http://localhost:8080/products', form)
-                .then(() => {
-                    data.push(form)
-                })
-                .catch((err) => console.log(err))
-            setModalVisible(false)
-        }
-
-        useEffect(() => {
-            if (actionForm === 'Edit') {
-                // create new object edited data from referal data
-                const editedData = Object.assign({}, data.find(v => v.id === updatedId))
-                delete editedData.id
-                setForm(editedData)
-            }
-        }, [data, updatedId, actionForm])
     }
 
     const handleSubmit = (e) => {
@@ -52,7 +45,15 @@ export default function FormDashboard({
         return updateData()
         //edit
     }
-
+    useEffect(() => {
+        if (actionForm === 'Edit') {
+            // create new object edited data from referal data
+            const editedData = Object.assign({}, data.find(v => v.id === updatedId))
+            delete editedData.id
+            setForm(editedData)
+        }
+    }, [data, updatedId, actionForm])//initial data
+    // console.log({ updatedId })
     return (
 
         <div>
