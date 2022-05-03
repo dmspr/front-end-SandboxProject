@@ -2,7 +2,6 @@ import React from 'react'
 import styled from 'styled-components'
 import SecondButton from './secondButton'
 import phone from '../img/phone.svg'
-import band from '../img/band.png'
 
 function HeaderContent() {
     return (
@@ -18,7 +17,6 @@ function HeaderContent() {
             </div>
             <div className="right-content">
                 <img width="90%" src={phone} alt="phone" />
-                <img width="15%" src={band} alt="guitar" className='band' />
             </div>
         </HeaderContentStyled >
     )

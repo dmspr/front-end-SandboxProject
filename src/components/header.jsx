@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import bg from '../img/blue.jpg'
 import Navigation from "./navigation";
 import HeaderContent from "./headerContent";
+import KontenhHompage from '../components/homepageKonten/kontenHompage'
 
 export default function Header() {
 
@@ -11,6 +12,7 @@ export default function Header() {
             <div className="header-content">
                 <Navigation />
                 <HeaderContent />
+                <KontenhHompage />
             </div>
         </HeaderStyled>
     )

@@ -4,7 +4,7 @@ import styled from 'styled-components'
 function SecondButton({ name }) {
     return (
         <SecondButtonStyle>
-            {name}
+            <a href='/register'>{name}</a>
         </SecondButtonStyle>
     )
 }
