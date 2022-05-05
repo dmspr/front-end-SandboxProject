@@ -1,7 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
 import Logo from '../../img/poster.png'
 import './listDiscover.scss'
-import { toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
 import { MdLocationPin } from "react-icons/md"
 import { MdDateRange } from 'react-icons/md'
@@ -13,7 +12,7 @@ import { Link } from 'react-router-dom'
 
 export default function ListDiscover({ list }) {
 
-    
+
 
     function formatDate(s) {
         var months = 'January February Maret April May June July August September October November December'.split(' ');
@@ -45,7 +44,7 @@ export default function ListDiscover({ list }) {
                         <p>Rp.{thousandSeparator(`${list.price}`)}</p>
                     </div>
                 </div>
-                <hr style={{ margin: "10px", height:'1px', color:'grey'}} />
+                <hr style={{ margin: "10px", height: '1px', color: 'grey' }} />
                 <div style={{ padding: "0" }}>
                     <span><img style={{ margin: '0', width: "35px", height: "35px", borderRadius: '50%' }} src={LogoHere} alt="logo" />
                         <h5>{list.organized}</h5>

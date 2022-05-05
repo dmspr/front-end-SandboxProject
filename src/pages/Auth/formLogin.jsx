@@ -31,7 +31,7 @@ export default function FormLogin() {
                 console.log(res.data)
                 toast.success('Login Succesfully', {
                     position: "top-center",
-                    autoClose: 1500,
+                    autoClose: 500,
                 })
                 setTimeout(function () { window.location = `/dashboard/${res.data.payload.id}` }, 1500)
             })

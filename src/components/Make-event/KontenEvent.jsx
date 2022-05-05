@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { FormGroup, Label, Button } from "reactstrap";
+import { FormGroup, Label } from "reactstrap";
 import styled from 'styled-components'
 import axios from 'axios'
 import poster from '../../img/poster.png'
@@ -34,7 +34,7 @@ export default function KontenEvent() {
                     position: "top-center",
                     autoClose: 1500,
                 })
-                setTimeout(function () { window.location = '/dashboard' }, 1500)
+                setTimeout(function () { window.location = `/dashboard` }, 1500)
             })
             .catch(err => {
                 if (err.response.status === 400)
@@ -47,7 +47,7 @@ export default function KontenEvent() {
 
             })
     }
-
+    let dates = new Date()
     // console.log(nameEvent)
     console.log(description)
 
@@ -91,7 +91,7 @@ export default function KontenEvent() {
                             <Label>
                                 <h5 className="dateh5">Date</h5>
                             </Label>
-                            <input type="date" className="date"
+                            <input min={{ dates }} type="date" className="date"
                                 onChange={(e) => setDate(e.target.value)}></input>
                         </div>
                         <div className="right">

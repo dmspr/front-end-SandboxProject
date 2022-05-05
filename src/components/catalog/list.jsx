@@ -15,12 +15,12 @@ import 'react-toastify/dist/ReactToastify.css'
 import { MdLocationPin } from "react-icons/md"
 import { MdDateRange } from 'react-icons/md'
 import { useParams } from 'react-router-dom'
-import FormDashboard from './form'
+import { Link } from 'react-router-dom'
 
 export default function List({ list }) {
 
     const params = useParams()
-    const [data, setData] = useState([])    
+    const [data, setData] = useState([])
     const [modalVisible, setModalVisible] = useState(false)
     const [updatedId, setUpdatedId] = useState(null)
     const [action, setAction] = useState(null)
@@ -39,8 +39,9 @@ export default function List({ list }) {
 
             })
             .catch((err) => console.log(err))
-
     }
+
+
     const handleEdit = (id) => {
         setUpdatedId(id);
         setAction('Edit');
@@ -52,6 +53,8 @@ export default function List({ list }) {
         var b = s.split(/\D/);
         return b[2] + ' ' + months[b[1] - 1] + ' ' + b[0];
     }
+
+
     return (
         <div className='blogItem-wrap'>
             <img src={Logo} alt='test' />
@@ -72,21 +75,21 @@ export default function List({ list }) {
                 </div>
                 <div>
                     <Button className='btn-delete' color='danger' onClick={() => handleDelete(list.id)}> Delete</Button>
-                    <Button className='btn-edit' color='success' onClick={() => handleEdit(list.id)}> Edit</Button>
+                    <Button className='btn-edit' color='success'> <Link to={`/edit/${list.id}`}> Edit</Link></Button>
                 </div>
             </footer>
-            <Modal isOpen={modalVisible} toggle={() => setModalVisible(!modalVisible)}>
-                    <ModalHeader>{`Form ${action} Data`}</ModalHeader>
-                    <ModalBody>
-                        <FormDashboard
-                            actionForm={action}
-                            data={data}
-                            setData={setData}
-                            setModalVisible={setModalVisible}
-                            updatedId={updatedId}
-                        />
-                    </ModalBody>
-                </Modal>
+            {/* <Modal isOpen={modalVisible} toggle={() => setModalVisible(!modalVisible)}>
+                <ModalHeader>{`Form ${action} Data`}</ModalHeader>
+                <ModalBody>
+                    <FormDashboard
+                        actionForm={action}
+                        data={data}
+                        setData={setData}
+                        setModalVisible={setModalVisible}
+                        updatedId={updatedId}
+                    />
+                </ModalBody>
+            </Modal> */}
         </div>
     )
 }

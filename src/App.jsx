@@ -16,6 +16,7 @@ import 'react-toastify/dist/ReactToastify.css'
 import Event from '../src/pages/event'
 import Discover from './pages/discover';
 import DiscoverPageById from './pages/discoverById';
+import EditPage from './pages/Edit';
 
 
 
@@ -37,9 +38,10 @@ function App() {
           <Route index path="/login" element={<Login />} />
           <Route index path="/register" element={<Register />} />
           <Route path="/discover">
-            <Route path=':id' element={<DiscoverPageById/>} />
+            <Route path=':id' element={<DiscoverPageById />} />
             <Route index element={<Discover />} />
           </Route>
+          <Route path='/edit/:id' element={<EditPage/>} />
 
           <Route element={<RequiredAuth />}>
             <Route index path="/dashboard/:id" element={<Dashboard />} />
